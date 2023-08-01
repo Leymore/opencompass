@@ -20,7 +20,6 @@ models = [
             device_map='auto',
             trust_remote_code=True,
             max_seq_len=4096,
-            revision='68e1a8e0ebb9b30f3c45c1ef6195980f29063ae2',
         ),
         run_cfg=dict(num_gpus=1, num_procs=1),
     )

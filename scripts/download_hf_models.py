@@ -9,12 +9,12 @@ model = AutoModelForCausalLM.from_pretrained(
     args.model,
     trust_remote_code=True,
     revision=args.revision,
-    cache_dir="/mnt/petrelfs/share_data/basemodel/checkpoints/llm/hf_hub"
+    cache_dir="/mnt/petrelfs/share_data/zhoufengzhe/checkpoints/llm/hf_hub"
 )
 tokenizer = AutoTokenizer.from_pretrained(
     args.model,
     trust_remote_code=True,
-    cache_dir="/mnt/petrelfs/share_data/basemodel/checkpoints/llm/hf_hub"
+    cache_dir="/mnt/petrelfs/share_data/zhoufengzhe/checkpoints/llm/hf_hub"
 )
 
 """

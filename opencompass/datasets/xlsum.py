@@ -17,7 +17,7 @@ class XLSUMDataset(BaseDataset):
             'english', 'kirundi', 'gujarati', 'hausa', 'hindi', 'igbo',
             'indonesian', 'japanese', 'korean', 'kyrgyz', 'marathi', 'spanish',
             'scottish_gaelic', 'nepali', 'pashto', 'persian', 'pidgin',
-            'portuguese', 'punjabi', 'russian', 'serbian_cyrillic',
+            'portuguese', 'punjabi', 'serbian_cyrillic', # 'russian',
             'serbian_latin', 'sinhala', 'somali', 'swahili', 'tamil', 'telugu',
             'thai', 'tigrinya', 'turkish', 'ukrainian', 'urdu', 'uzbek',
             'vietnamese', 'yoruba'
@@ -25,7 +25,7 @@ class XLSUMDataset(BaseDataset):
 
         datasets = []
         for lan in lans:
-            dataset = load_dataset(path, lan)['validation']
+            dataset = load_dataset(path, lan, split='validation[:100]')
             datasets.append(dataset)
 
         combined_dataset = concatenate_datasets(datasets)

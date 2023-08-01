@@ -17,17 +17,17 @@ for _split in ['R1', 'R2', 'R3']:
             template={
                 "A":
                 dict(round=[
-                    dict(role="HUMAN", prompt="{context}\n{hypothesis}\What is the relation between the two sentences?"),
+                    dict(role="HUMAN", prompt="{context}\n{hypothesis}\nWhat is the relation between the two sentences?"),
                     dict(role="BOT", prompt="Contradiction"),
                 ]),
                 "B":
                 dict(round=[
-                    dict(role="HUMAN", prompt="{context}\n{hypothesis}\What is the relation between the two sentences?"),
+                    dict(role="HUMAN", prompt="{context}\n{hypothesis}\nWhat is the relation between the two sentences?"),
                     dict(role="BOT", prompt="Entailment"),
                 ]),
                 "C":
                 dict(round=[
-                    dict(role="HUMAN", prompt="{context}\n{hypothesis}\What is the relation between the two sentences?"),
+                    dict(role="HUMAN", prompt="{context}\n{hypothesis}\nWhat is the relation between the two sentences?"),
                     dict(role="BOT", prompt="Neutral"),
                 ]),
             },

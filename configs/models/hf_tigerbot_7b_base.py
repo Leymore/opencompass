@@ -15,7 +15,7 @@ models = [
         max_out_len=100,
         max_seq_len=2048,
         batch_size=8,
-        model_kwargs=dict(trust_remote_code=True, device_map='auto', revision='5f34fd223586e9efb8eb0e3bc667f03581886992'),
+        model_kwargs=dict(trust_remote_code=True, device_map='auto'),
         run_cfg=dict(num_gpus=1, num_procs=1),
     ),
 ]
