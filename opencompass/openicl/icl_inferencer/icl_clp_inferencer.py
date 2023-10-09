@@ -55,6 +55,7 @@ class CLPInferencer(BaseInferencer):
             output_json_filepath: Optional[str] = './icl_inference_output',
             output_json_filename: Optional[str] = 'predictions',
             single_token: bool = True,
+            candidates: Optional[List[str]] = None,
             **kwargs) -> None:
         super().__init__(
             model=model,
@@ -68,6 +69,7 @@ class CLPInferencer(BaseInferencer):
         # TODO: support multiple token
         assert single_token, 'Only support single token choice currently.'
         self.single_token = single_token
+        self.candidates = candidates
 
     def inference(self,
                   retriever: BaseRetriever,
@@ -108,7 +110,7 @@ class CLPInferencer(BaseInferencer):
             ice.append(
                 retriever.generate_ice(ice_idx_list[idx],
                                        ice_template=ice_template))
-        output_handler.save_ice(ice)
+        output_handler.save_ice(self.model.parse_template(ice, mode='ppl'))
 
         # 4. Collect prompts and calculate conditional log probs
         if self.single_token:
@@ -116,7 +118,10 @@ class CLPInferencer(BaseInferencer):
             prompt_list = []
             target_pos = []
             # TODO: Hard code temperaily, need to modified here
-            choices = retriever.test_ds[0]['choices']
+            if self.candidates is None:
+                choices = retriever.test_ds[0]['choices']
+            else:
+                choices = self.candidates
             try:
                 choice_ids = [
                     self.model.tokenizer.encode(c, False, False)
@@ -134,6 +139,9 @@ class CLPInferencer(BaseInferencer):
             if isinstance(choice_ids[0], list):
                 # in case tokenizer returns list for single token
                 choice_ids = list(itertools.chain(*choice_ids))
+
+            for choice, choice_id in zip(choices, choice_ids):
+                logger.info(f'Choice: {choice}, id: {choice_id}')
 
             get_token_len = self.model.get_token_len
 
@@ -220,7 +228,8 @@ class CLPInferencer(BaseInferencer):
                 # save all the result
                 for res, prompt, gold in zip(sub_res, sub_prompt_list,
                                              sub_golds):
-                    example_input = prompt.replace(ice[idx], '')
+                    ice_str = self.model.parse_template(ice[idx], mode='ppl')
+                    example_input = prompt.replace(ice_str, '')
                     output_handler.save_prompt_and_condprob(example_input,
                                                             prompt,
                                                             res,

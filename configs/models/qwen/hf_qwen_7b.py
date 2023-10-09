@@ -17,7 +17,6 @@ models = [
             truncation_side='left',
             trust_remote_code=True,
             use_fast=False,
-            revision='39fc5fdcb95c8c367bbdb3bfc0db71d96266de09'
         ),
         pad_token_id=151643,
         max_out_len=100,
@@ -26,7 +25,6 @@ models = [
         model_kwargs=dict(
             device_map='auto',
             trust_remote_code=True,
-            revision='39fc5fdcb95c8c367bbdb3bfc0db71d96266de09'
         ),
         run_cfg=dict(num_gpus=1, num_procs=1),
     )

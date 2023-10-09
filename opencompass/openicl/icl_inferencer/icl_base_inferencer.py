@@ -189,10 +189,9 @@ class CLPInferencerOutputHandler:
         # for single token situation, the input will always be yes currently
         self.results_dict[str(idx)]['testing input'] = input
         self.results_dict[str(idx)]['prompt'] = prompt
-        # TODO: hard code here
         self.results_dict[str(idx)]['choices'] = choices
-        # For calculate auc scores, set scores as prediction
-        self.results_dict[str(idx)]['prediction'] = cond_prob
-        # set pred label in case needed
+        self.results_dict[str(idx)]['prediction'] = choices[int(
+            np.argmax(cond_prob))]
         self.results_dict[str(idx)]['pred_label'] = int(np.argmax(cond_prob))
+        self.results_dict[str(idx)]['pred_prob'] = cond_prob
         self.results_dict[str(idx)]['gold'] = gold
