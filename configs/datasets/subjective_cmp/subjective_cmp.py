@@ -6,11 +6,11 @@ from opencompass.datasets.subjective_cmp import SubjectiveCmpDataset
 
 subjective_reader_cfg = dict(
     input_columns=['question', 'index', 'reference_answer', 'evaluating_guidance', 'capability', 'prompt'],
-    output_column='judge',
+    output_column=None,
     train_split='test')
 
 subjective_all_sets = [
-    "creation_v0.1",
+    "subjective_demo",
 ]
 
 subjective_datasets = []
