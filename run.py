@@ -92,9 +92,15 @@ def parse_args():
         type=str)
     parser.add_argument('-l',
                         '--lark',
-                        help='Report the running status to lark bot',
-                        action='store_true',
-                        default=False)
+                        nargs='?',
+                        type=str,
+                        const='LARK_BOT_URL',
+                        help='Report the running status to lark bot. If its '
+                        'argument is not specified, the lark bot url will '
+                        'be read from the environment variable '
+                        'LARK_BOT_URL. The argument should also be a '
+                        'specific url, e.g. '
+                        'https://open.feishu.cn/open-apis/bot/v2/hook/xxx')
     parser.add_argument('--max-partition-size',
                         help='The maximum size of an infer task. Only '
                         'effective when "infer" is missing from the config.',
@@ -242,9 +248,20 @@ def main():
     cfg = Config.fromfile(output_config_path, format_python_code=False)
 
     # report to lark bot if specify --lark
-    if not args.lark:
+    if args.lark:
+        if args.lark == 'LARK_BOT_URL':
+            if os.environ.get('LARK_BOT_URL', None) is None:
+                logger.warning('You have not set the LARK_BOT_URL '
+                               'environment variable, so the lark bot url '
+                               'will not be used.')
+                cfg['lark_bot_url'] = None
+            else:
+                cfg['lark_bot_url'] = os.environ['LARK_BOT_URL']
+        else:
+            cfg['lark_bot_url'] = args.lark
+    else:
         cfg['lark_bot_url'] = None
-    elif cfg.get('lark_bot_url', None):
+    if cfg.get('lark_bot_url', None):
         content = f'{getpass.getuser()}\'s task has been launched!'
         LarkReporter(cfg['lark_bot_url']).post(content)
 
