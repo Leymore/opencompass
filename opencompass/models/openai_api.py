@@ -334,7 +334,6 @@ class OpenAIAllesAPIN(OpenAI):
                  path: str,
                  url: str,
                  key: str,
-                 temperature: float = 1.0,
                  query_per_second: int = 1,
                  rpm_verbose: bool = False,
                  max_seq_len: int = 2048,
@@ -347,7 +346,6 @@ class OpenAIAllesAPIN(OpenAI):
                          meta_template=meta_template,
                          retry=retry)
         self.url = url
-        self.temperature = temperature
         self.headers = {
             'alles-apin-token': key,
             'content-type': 'application/json',
@@ -389,12 +387,11 @@ class OpenAIAllesAPIN(OpenAI):
             # model can be response with user and system
             # when it comes with agent involved.
             assert msg['role'] in ['user', 'system']
-
         data = {
             'model': self.path,
             'messages': messages,
-            'temperature': temperature
         }
+
         for _ in range(self.retry):
             self.wait()
             raw_response = requests.post(self.url,
