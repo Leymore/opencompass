@@ -10,7 +10,7 @@ f_{\text {ave }} & =\frac{1}{b-a} \int_a^b f(x) d x=\frac{1}{2-(-1)} \int_{-1}^2
 $$
 Therefore, the answer is \boxed{2}.
 
-Promblem 2: Estimate the volume of the solid that lies above the square $R=[0,2] \times[0,2]$ and below the elliptic paraboloid $z=16-x^2-2 y^2$. Divide $R$ into four equal squares and choose the sample point to be the upper right corner of each square $R_{i j}$. 
+Promblem 2: Estimate the volume of the solid that lies above the square $R=[0,2] \times[0,2]$ and below the elliptic paraboloid $z=16-x^2-2 y^2$. Divide $R$ into four equal squares and choose the sample point to be the upper right corner of each square $R_{i j}$.
 Explanation for Problem 2: The squares are shown in Figure 6. The paraboloid is the graph of $f(x, y)=16-x^2-2 y^2$ and the area of each square is $\Delta A=1$. Approximating the volume by the Riemann sum with $m=n=2$, we have
 $$
 \begin{aligned}
@@ -59,4 +59,3 @@ $$
 $$
 
 Therefore, the answer is \boxed{0.693150}.
-

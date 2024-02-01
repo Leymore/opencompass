@@ -98,4 +98,3 @@ p_2=\frac{500 \mathrm{~K}}{300 \mathrm{~K}} \times(100 \mathrm{~atm})=167 \mathr
 $$
 
 Therefore, the answer is \boxed{167}.
-

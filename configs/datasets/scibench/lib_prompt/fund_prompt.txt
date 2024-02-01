@@ -17,4 +17,3 @@ Promblem 5: If the particles in a system all move together, the com moves with t
 
 The three particles in Figure are initially at rest. Each experiences an external force due to bodies outside the three-particle system. The directions are indicated, and the magnitudes are $F_1=6.0 \mathrm{~N}, F_2=12 \mathrm{~N}$, and $F_3=14 \mathrm{~N}$. What is the acceleration of the center of mass of the system?
 Answer: The answer is \boxed{ 1.16}.
-

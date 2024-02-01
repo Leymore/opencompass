@@ -72,4 +72,3 @@ $$
 \end{aligned}
 $$
 Therefore, the answer is \boxed{-1.78}.
-

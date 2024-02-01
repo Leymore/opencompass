@@ -14,4 +14,3 @@ Answer: The answer is \boxed{243}.
 
 Promblem 5: To a good approximation, the microwave spectrum of $\mathrm{H}^{35} \mathrm{Cl}$ consists of a series of equally spaced lines, separated by $6.26 \times 10^{11} \mathrm{~Hz}$. Calculate the bond length of $\mathrm{H}^{35} \mathrm{Cl}$.
 Answer: The answer is \boxed{129}.
-

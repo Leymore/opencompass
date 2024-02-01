@@ -17,4 +17,3 @@ Answer: The answer is \boxed{0.396}.
 
 Promblem 5: Gas cylinders of $\mathrm{CO}_2$ are sold in terms of weight of $\mathrm{CO}_2$. A cylinder contains $50 \mathrm{lb}$ (22.7 $\mathrm{kg}$ ) of $\mathrm{CO}_2$. How long can this cylinder be used in an experiment that requires flowing $\mathrm{CO}_2$ at $293 \mathrm{~K}(\eta=146 \mu \mathrm{P})$ through a 1.00-m-long tube (diameter $\left.=0.75 \mathrm{~mm}\right)$ with an input pressure of $1.05 \mathrm{~atm}$ and output pressure of $1.00 \mathrm{~atm}$ ? The flow is measured at the tube output.
 Answer: The answer is \boxed{4.49}.
-

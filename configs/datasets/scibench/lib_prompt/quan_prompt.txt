@@ -6,7 +6,7 @@ Answer: The answer is \boxed{0.4908}.
 Promblem 2: Calculate the ground-state energy of the hydrogen atom using SI units and convert the result to electronvolts.
 Answer: The answer is \boxed{-13.598 }.
 
-Promblem 3: The strongest infrared band of ${ }^{12} \mathrm{C}^{16} \mathrm{O}$ occurs at $\widetilde{\nu}=2143 \mathrm{~cm}^{-1}$. Find the force constant of ${ }^{12} \mathrm{C}^{16} \mathrm{O}$. 
+Promblem 3: The strongest infrared band of ${ }^{12} \mathrm{C}^{16} \mathrm{O}$ occurs at $\widetilde{\nu}=2143 \mathrm{~cm}^{-1}$. Find the force constant of ${ }^{12} \mathrm{C}^{16} \mathrm{O}$.
 Answer: The answer is \boxed{1855}.
 
 Promblem 4: Find the probability that the electron in the ground-state $\mathrm{H}$ atom is less than a distance $a$ from the nucleus.
@@ -14,4 +14,3 @@ Answer: The answer is \boxed{0.323}.
 
 Promblem 5: A one-particle, one-dimensional system has $\Psi=a^{-1 / 2} e^{-|x| / a}$ at $t=0$, where $a=1.0000 \mathrm{~nm}$. At $t=0$, the particle's position is measured. (a) Find the probability that the measured value lies between $x=1.5000 \mathrm{~nm}$ and $x=1.5001 \mathrm{~nm}$.
 Answer: The answer is \boxed{4.979}.
-

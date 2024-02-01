@@ -18,4 +18,3 @@ Answer: The answer is \boxed{635.7}.
 
 Promblem 5: The single electron in a certain excited state of a hydrogenic $\mathrm{He}^{+}$ion $(Z=2)$ is described by the wavefunction $R_{3,2}(r) \times$ $Y_{2,-1}(\theta, \phi)$. What is the energy of its electron?
 Answer: The answer is \boxed{ -6.04697}.
-

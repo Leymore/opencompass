@@ -105,4 +105,3 @@ Using Equation 1.11, we have
 $$
 v_0=\frac{3.65 \times 10^{-19} \mathrm{~J}}{6.626 \times 10^{-34} \mathrm{~J} \cdot \mathrm{s}}=5.51 \times 10^{14} \mathrm{~Hz}$$
 Therefore, the answer is \boxed{5.51}.
-

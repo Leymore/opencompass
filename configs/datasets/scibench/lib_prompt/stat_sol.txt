@@ -1,7 +1,7 @@
 Please provide a clear and step-by-step solution for a scientific problem in the categories of Chemistry, Physics, or Mathematics. The problem will specify the unit of measurement, which should not be included in the answer. Express the final answer as a decimal number with three digits after the decimal point. Conclude the answer by stating 'Therefore, the answer is \boxed[ANSWER].
 
 Promblem 1: A rocket has a built-in redundant system. In this system, if component $K_1$ fails, it is bypassed and component $K_2$ is used. If component $K_2$ fails, it is bypassed and component $K_3$ is used. (An example of a system with these kinds of components is three computer systems.) Suppose that the probability of failure of any one component is 0.15 , and assume that the failures of these components are mutually independent events. Let $A_i$ denote the event that component $K_i$ fails for $i=1,2,3$. What is the probability that the system fails?
-Explanation for Problem 1: 
+Explanation for Problem 1:
 Because the system fails if $K_1$ fails and $K_2$ fails and $K_3$ fails, the probability that the system does not fail is given by
 $$
 \begin{aligned}
@@ -45,4 +45,3 @@ $$
 \end{array}\right)=\frac{7 !}{4 ! 3 !}=35 \text {. }
 $$
 Therefore, the answer is \boxed{35}.
-

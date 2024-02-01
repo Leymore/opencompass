@@ -41,25 +41,20 @@ repos:
         exclude: |
             (?x)^(
               dicts/|
-              projects/.*?/dicts/|
-              configs/
+              projects/.*?/dicts/
             )
       - id: check-yaml
       - id: end-of-file-fixer
         exclude: |
             (?x)^(
               dicts/|
-              projects/.*?/dicts/|
-              configs/
+              projects/.*?/dicts/
             )
       - id: requirements-txt-fixer
       - id: double-quote-string-fixer
-        exclude: configs/
       - id: check-merge-conflict
       - id: fix-encoding-pragma
         args: ["--remove"]
-      - id: mixed-line-ending
-        args: ["--fix=lf"]
       - id: mixed-line-ending
         args: ["--fix=lf"]
   - repo: https://github.com/executablebooks/mdformat
@@ -71,7 +66,6 @@ repos:
           - mdformat-openmmlab
           - mdformat_frontmatter
           - linkify-it-py
-        exclude: configs/
   - repo: https://github.com/myint/docformatter
     rev: v1.3.1
     hooks:

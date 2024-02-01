@@ -48,7 +48,7 @@ api_meta_template = dict(
 judge_model = dict(
         type=HuggingFaceCausalLM,
         abbr='pandalm-7b-v1-hf',
-        path="WeOpenML/PandaLM-7B-v1",
+        path='WeOpenML/PandaLM-7B-v1',
         tokenizer_path='WeOpenML/PandaLM-7B-v1',
         tokenizer_kwargs=dict(padding_side='left',
                               truncation_side='left',

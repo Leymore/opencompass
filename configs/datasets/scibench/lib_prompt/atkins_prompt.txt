@@ -15,4 +15,3 @@ Answer: The answer is \boxed{+80}.
 
 Promblem 5: Calculate the moment of inertia of an $\mathrm{H}_2 \mathrm{O}$ molecule around the axis defined by the bisector of the $\mathrm{HOH}$ angle (3). The $\mathrm{HOH}$ bond angle is $104.5^{\circ}$ and the bond length is $95.7 \mathrm{pm}$.
 Answer: The answer is \boxed{1.91}.
-

@@ -14,4 +14,3 @@ Answer: The answer is \boxed{41}.
 
 Promblem 5: A force of $40 \mathrm{~N}$ is required to hold a spring that has been stretched from its natural length of $10 \mathrm{~cm}$ to a length of $15 \mathrm{~cm}$. How much work is done in stretching the spring from $15 \mathrm{~cm}$ to $18 \mathrm{~cm}$ ?
 Answer: The answer is \boxed{1.56}.
-

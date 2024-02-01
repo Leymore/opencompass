@@ -117,4 +117,3 @@ $$
 The acceptable root is $x=0.366$, which implies that $V_{\mathrm{m}}=0.366$ $\mathrm{dm}^3 \mathrm{~mol}^{-1}$. The molar volume of a perfect gas under these conditions is $0.410 \mathrm{dm}^3 \mathrm{~mol}^{-1}$.
 
 Therefore, the answer is \boxed{0.366}.
-

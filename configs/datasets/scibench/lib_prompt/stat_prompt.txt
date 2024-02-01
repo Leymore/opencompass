@@ -14,4 +14,3 @@ Answer: The answer is \boxed{2598960}.
 
 Promblem 5: A grade school boy has five blue and four white marbles in his left pocket and four blue and five white marbles in his right pocket. If he transfers one marble at random from his left to his right pocket, what is the probability of his then drawing a blue marble from his right pocket?
 Answer: The answer is \boxed{0.444444444444444 }.
-

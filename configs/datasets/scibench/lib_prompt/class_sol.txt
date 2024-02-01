@@ -36,7 +36,7 @@ $$
 
 Therefore, the answer is \boxed{22}.
 
-Promblem 2: Consider the first stage of a Saturn $V$ rocket used for the Apollo moon program. The initial mass is $2.8 \times 10^6 \mathrm{~kg}$, and the mass of the first-stage fuel is $2.1 \times 10^6$ kg. Assume a mean thrust of $37 \times 10^6 \mathrm{~N}$. The exhaust velocity is $2600 \mathrm{~m} / \mathrm{s}$. Calculate the final speed of the first stage at burnout. 
+Promblem 2: Consider the first stage of a Saturn $V$ rocket used for the Apollo moon program. The initial mass is $2.8 \times 10^6 \mathrm{~kg}$, and the mass of the first-stage fuel is $2.1 \times 10^6$ kg. Assume a mean thrust of $37 \times 10^6 \mathrm{~N}$. The exhaust velocity is $2600 \mathrm{~m} / \mathrm{s}$. Calculate the final speed of the first stage at burnout.
 Explanation for Problem 2: From the thrust (Equation 9.157), we can determine the fuel burn rate:
 $$
 \frac{d m}{d t}=\frac{\text { thrust }}{-u}=\frac{37 \times 10^6 \mathrm{~N}}{-2600 \mathrm{~m} / \mathrm{s}}=-1.42 \times 10^4 \mathrm{~kg} / \mathrm{s}
@@ -166,4 +166,3 @@ y_{\max }\left(t=\frac{T}{2}\right) & =\frac{-g T^2}{8}+\frac{v_0 T}{2} \sin \th
 $$
 
 Therefore, the answer is \boxed{72}.
-

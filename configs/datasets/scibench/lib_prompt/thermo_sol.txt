@@ -109,4 +109,3 @@ D_{Ar} &= \frac{1}{3} \nu_{ave, Ar} \lambda_{Ar} \\
 \end{aligned}
 $$
 Therefore, the answer is \boxed{1.1}.
-
