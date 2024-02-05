@@ -3,8 +3,9 @@ from opencompass.models import HuggingFaceCausalLM
 
 _meta_template = dict(
     round=[
-        dict(role='HUMAN', begin='<|im_start|>user\n', end='<|im_end|>\n'),
-        dict(role='BOT', begin='<|im_start|>assistant\n', end='<|im_end|>\n', generate=True),
+        dict(role='HUMAN', begin='[UNUSED_TOKEN_146]user\n', end='[UNUSED_TOKEN_145]\n'),
+        dict(role='SYSTEM', begin='[UNUSED_TOKEN_146]system\n', end='[UNUSED_TOKEN_145]\n'),
+        dict(role='BOT', begin='[UNUSED_TOKEN_146]assistant\n', end='[UNUSED_TOKEN_145]\n', generate=True),
     ],
     eos_token_id=92542
 )
@@ -12,9 +13,9 @@ _meta_template = dict(
 models = [
     dict(
         type=HuggingFaceCausalLM,
-        abbr='internlm2-chat-7b-hf',
-        path="internlm/internlm2-chat-7b",
-        tokenizer_path='internlm/internlm2-chat-7b',
+        abbr='internlm2-chat-math-20b-hf',
+        path="internlm/internlm2-math-20b",
+        tokenizer_path='internlm/internlm2-math-20b',
         model_kwargs=dict(
             trust_remote_code=True,
             device_map='auto',
@@ -29,7 +30,7 @@ models = [
         max_seq_len=2048,
         batch_size=8,
         meta_template=_meta_template,
-        run_cfg=dict(num_gpus=1, num_procs=1),
-        end_str='<|im_end|>',
+        run_cfg=dict(num_gpus=2, num_procs=1),
+        end_str='[UNUSED_TOKEN_145]',
     )
 ]
