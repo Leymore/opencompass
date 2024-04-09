@@ -118,7 +118,7 @@ class CompassArenaSummarizer:
                         output_dir, 'judged-by--' + judge_model + '-' +
                         dataset_abbr + '-report.csv')
                 fout_list.append(fout)
-                for model_pair in unique_combinations:
+                for model_index, model_pair in enumerate(unique_combinations):
                     model1, model2, = model_pair[0]['abbr'], model_pair[1][
                         'abbr'],
                     if idx == pre_len:
@@ -207,10 +207,9 @@ class CompassArenaSummarizer:
                                      categories[capability]) * 100, 2)
                         win_model1['position_bias'] = bias_num
                         win_model2['position_bias'] = bias_num
-                        scores = {
-                            'win_' + model1: win_model1,
-                            'win_' + model2: win_model2
-                        }
+                        scores = {}
+                        # scores['win_' + model1] = win_model1
+                        scores['win_' + model2] = win_model2
                         rows = list(scores.keys())
                         columns = list(scores[rows[0]].keys())
                         columns.insert(0, columns.pop(columns.index('total')))
@@ -218,8 +217,9 @@ class CompassArenaSummarizer:
                             1, columns.pop(columns.index('position_bias')))
                         with open(fout, 'a+', newline='') as csvfile:
                             writer = csv.writer(csvfile)
-                            writer.writerow([model1 + '_vs_' + model2] +
-                                            columns)
+                            if model_index == 0:
+                                writer.writerow([model1 + '_vs_' + model2] +
+                                                columns)
                             for row in rows:
                                 writer.writerow([row] + [
                                     scores[row][column] for column in columns
@@ -229,4 +229,5 @@ class CompassArenaSummarizer:
         for fout in fout_list:
             with open(fout, 'r') as f:
                 x = from_csv(f)
+            print(fout)
             print(x)
