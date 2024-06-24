@@ -78,6 +78,9 @@ class HumanEvaluator(BaseEvaluator):
         super().__init__()
 
     def score(self, predictions, references, test_set):
+        if len(predictions) != len(references):
+            return {'error': 'preds and refrs have different length'}
+
         prompts = [item['prompt'] for item in test_set]
         humaneval_preds = []
         if self.metric == 'HumanEval':

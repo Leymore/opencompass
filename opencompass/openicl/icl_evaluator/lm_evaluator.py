@@ -1,6 +1,7 @@
 # flake8: noqa: E501
 import os.path as osp
 import random
+import re
 from typing import Dict, List, Optional
 
 import mmengine
@@ -62,6 +63,16 @@ def order_preds_and_record_references(
             reversed_references.append(reversed_item)
         references += reversed_references
     return list_of_preds, references
+
+
+def count_chinese_characters(text):
+    words = re.findall(r'[\u4e00-\u9fff]', text)
+    return len(words)
+
+
+def count_english_words(text):
+    words = re.findall(r'\b[a-zA-Z]+\b', text)
+    return len(words)
 
 
 class LMEvaluator:
@@ -163,6 +174,10 @@ class LMEvaluator:
                 gold_key = 'obj_gold'
                 pred_dict[key] = predictions[i]
                 pred_dict[gold_key] = references
+                en = [count_english_words(j) for j in predictions[i]]
+                pred_dict[key + '_en_word_count'] = en
+                cn = [count_chinese_characters(j) for j in predictions[i]]
+                pred_dict[key + '_cn_word_count'] = cn
             if judgements:
                 for i in range(len(judgements)):
                     key = 'judgement' if i == 0 else f'judgement{i + 1}'
