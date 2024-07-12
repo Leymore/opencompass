@@ -19,7 +19,13 @@ humanevalx_eval_cfg_dict = {
             type=HumanevalXEvaluator,
             language=lang,
             ip_address=
-            'localhost',  # replace to your code_eval_server ip_address, port
+            # EXTERNAL 'localhost',  # replace to your code_eval_server ip_address, port
+            # INTERNAL_BEGIN
+            # If the IP address is not accessible,
+            # follow the instructions below to launch a code evaluate service.
+            # https://aicarrier.feishu.cn/docx/JpLAdWNh9oGC1fxH9Z9cTobLntb
+            'http://service.opencompass.org.cn',  # Need to use proxy on cluster T or S
+            # INTERNAL_END
             port=5001),  # refer to https://opencompass.readthedocs.io/en/latest/advanced_guides/code_eval_service.html to launch a server
         pred_role='BOT')
     for lang in ['python', 'cpp', 'go', 'java', 'js']   # do not support rust now
